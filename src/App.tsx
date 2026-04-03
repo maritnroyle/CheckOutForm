@@ -178,48 +178,16 @@ export default function App() {
 
       <main className="max-w-3xl mx-auto px-4 py-8 sm:px-6 lg:px-8 space-y-8">
         
-        {isSignedOff ? (
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center space-y-4"
-          >
-            <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
-              <CheckCircle2 className="w-8 h-8" />
-            </div>
-            <h2 className="text-2xl font-bold text-green-800">You're all set, {guestName}!</h2>
-            <p className="text-green-700 max-w-md mx-auto">
-              Thanks again for staying at WhiteCloud Homestay, it was a pleasure having you!
-            </p>
-            <div className="pt-4">
-              <button
-                onClick={() => {
-                  setIsSignedOff(false);
-                  setCheckedItems({});
-                  setGuestName('');
-                  setRoomNumber('');
-                  setStoringLuggage(false);
-                  setCollectionDateTime('');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center px-8 py-3 font-semibold rounded-xl text-green-800 bg-green-200/50 hover:bg-green-200 transition-colors"
-              >
-                Close
-              </button>
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"
-          >
-            <h2 className="text-2xl font-semibold text-[#002B7F] mb-3">Check-Out Checklist</h2>
-            <p className="text-slate-600">
-              We hope you enjoy your stay! To help us prepare the room for the next person and to ensure your bond refund is processed smoothly, please complete the following steps before you head off.
-            </p>
-          </motion.div>
-        )}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100"
+        >
+          <h2 className="text-2xl font-semibold text-[#002B7F] mb-3">Check-Out Checklist</h2>
+          <p className="text-slate-600">
+            We hope you enjoy your stay! To help us prepare the room for the next person and to ensure your bond refund is processed smoothly, please complete the following steps before you head off.
+          </p>
+        </motion.div>
 
         <div className="space-y-8">
           {CHECKLIST_SECTIONS.map((section, sectionIdx) => (
@@ -301,7 +269,7 @@ export default function App() {
         </motion.section>
 
         {/* Sign Off Section */}
-        {!isSignedOff && (
+        {!isSignedOff ? (
           <motion.section 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -415,6 +383,36 @@ export default function App() {
               </form>
             )}
           </motion.section>
+        ) : (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center space-y-4 mt-8"
+          >
+            <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+              <CheckCircle2 className="w-8 h-8" />
+            </div>
+            <h2 className="text-2xl font-bold text-green-800">You're all set, {guestName}!</h2>
+            <p className="text-green-700 max-w-md mx-auto">
+              Thanks again for staying at WhiteCloud Homestay, it was a pleasure having you!
+            </p>
+            <div className="pt-4">
+              <button
+                onClick={() => {
+                  setIsSignedOff(false);
+                  setCheckedItems({});
+                  setGuestName('');
+                  setRoomNumber('');
+                  setStoringLuggage(false);
+                  setCollectionDateTime('');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="inline-flex items-center justify-center px-8 py-3 font-semibold rounded-xl text-green-800 bg-green-200/50 hover:bg-green-200 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
         )}
         
         {/* Footer */}
