@@ -11,7 +11,7 @@ const CHECKLIST_SECTIONS = [
         id: 'b1', 
         label: 'Laundry', 
         description: 'Wash and dry the bed sheets, pillowcases, and duvet covers.', 
-        note: 'Please leave the mattress protector and electric blanket on the bed.' 
+        note: 'Please do not remove the mattress protector and electric blanket.' 
       },
       { 
         id: 'b2', 
@@ -151,7 +151,7 @@ export default function App() {
         <div className="max-w-3xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img src="/wclogo2025.jpg" alt="White Cloud Homestay" className="h-12 object-contain" />
+              <img src="/wclogo2025.jpg" alt="WhiteCloud Homestay" className="h-12 object-contain" />
             </div>
             <div className="text-sm font-medium text-[#002B7F]/70">
               Check-Out
@@ -188,18 +188,9 @@ export default function App() {
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-green-800">You're all set, {guestName}!</h2>
-            <div className="text-green-700 max-w-md mx-auto space-y-4">
-              <p>Thanks again for staying at WhiteCloud Homestay, it was a pleasure having you!</p>
-              <p>We’d love to hear what you thought of your stay, a quick star rating or review on Google Maps would make our day.</p>
-              <a 
-                href="https://maps.app.goo.gl/ttKpig9pHUqY7T688" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block text-green-800 font-medium underline hover:text-green-900 transition-colors break-all"
-              >
-                https://maps.app.goo.gl/ttKpig9pHUqY7T688
-              </a>
-            </div>
+            <p className="text-green-700 max-w-md mx-auto">
+              Thanks again for staying at WhiteCloud Homestay, it was a pleasure having you!
+            </p>
             <div className="pt-4">
               <button
                 onClick={() => {
