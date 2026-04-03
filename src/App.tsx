@@ -26,12 +26,12 @@ const CHECKLIST_SECTIONS = [
       { 
         id: 'b4', 
         label: 'Windows', 
-        description: 'Please ensure all windows in your room are securely closed. Leave the curtains or blinds open to allow for sunlight, which helps keep the room fresh, dry, and ventilated.' 
+        description: 'Securely close all windows. Leave the curtains and blinds open to allow for sunlight, which helps keep the room fresh and dry.' 
       },
       { 
         id: 'b5', 
         label: 'Lights and Appliances', 
-        description: 'Ensure all lights are turned off and the electric blanket is switched off' 
+        description: 'Please ensure that the electric blanket and lights are switched off.' 
       },
     ]
   },
@@ -63,7 +63,7 @@ const CHECKLIST_SECTIONS = [
       { 
         id: 'ba1', 
         label: 'Personal Items', 
-        description: 'Check the bathroom and living areas for any toiletries, phone chargers, or personal belongings.' 
+        description: 'Check the bathroom and living areas for any toiletries, phone chargers or personal belongings.' 
       },
     ]
   },
