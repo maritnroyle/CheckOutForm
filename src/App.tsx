@@ -188,9 +188,18 @@ export default function App() {
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-green-800">You're all set, {guestName}!</h2>
-            <p className="text-green-700 max-w-md mx-auto">
-              Thank you for staying with us in Room {roomNumber}, and all the best with your next journey! Your check-out has been recorded.
-            </p>
+            <div className="text-green-700 max-w-md mx-auto space-y-4">
+              <p>Thanks again for staying at WhiteCloud Homestay, it was a pleasure having you!</p>
+              <p>We’d love to hear what you thought of your stay, a quick star rating or review on Google Maps would make our day.</p>
+              <a 
+                href="https://maps.app.goo.gl/ttKpig9pHUqY7T688" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-block text-green-800 font-medium underline hover:text-green-900 transition-colors break-all"
+              >
+                https://maps.app.goo.gl/ttKpig9pHUqY7T688
+              </a>
+            </div>
             <div className="pt-4">
               <button
                 onClick={() => {
@@ -258,7 +267,7 @@ export default function App() {
                         )}
                       </div>
                       <div className="flex-1">
-                        <p className={`font-medium ${isChecked ? 'text-slate-900 line-through decoration-slate-300' : 'text-[#002B7F]'}`}>
+                        <p className={`font-medium ${isChecked ? 'text-slate-900' : 'text-[#002B7F]'}`}>
                           {item.label}
                         </p>
                         <p className={`mt-1 text-sm ${isChecked ? 'text-slate-500' : 'text-slate-600'}`}>
@@ -368,7 +377,7 @@ export default function App() {
                       className="w-5 h-5 text-[#4CB9E7] rounded border-slate-300 focus:ring-[#4CB9E7]"
                     />
                     <label htmlFor="storingLuggage" className="text-sm font-medium text-[#002B7F]">
-                      Are you storing any bag/luggage after check-out?
+                      Are you storing any bag/luggage in garage after check-out?
                     </label>
                   </div>
 
@@ -386,6 +395,7 @@ export default function App() {
                           type="datetime-local"
                           id="collectionDateTime"
                           required={storingLuggage}
+                          min={new Date().toISOString().slice(0, 16)}
                           value={collectionDateTime}
                           onChange={(e) => setCollectionDateTime(e.target.value)}
                           className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#4CB9E7] focus:border-[#4CB9E7] outline-none transition-all bg-white"
@@ -418,7 +428,6 @@ export default function App() {
         
         {/* Footer */}
         <footer className="text-center text-slate-500 text-sm pt-8 pb-4">
-          <p>Thank you for staying with us, and all the best with your next journey!</p>
         </footer>
       </main>
 
