@@ -26,7 +26,7 @@ const CHECKLIST_SECTIONS = [
       { 
         id: 'b4', 
         label: 'Windows', 
-        description: 'Please ensure all windows in your room are securely closed and locked. Leave the curtains or blinds open to allow for sunlight, which helps keep the room fresh, dry, and ventilated.' 
+        description: 'Please ensure all windows in your room are securely closed. Leave the curtains or blinds open to allow for sunlight, which helps keep the room fresh, dry, and ventilated.' 
       },
       { 
         id: 'b5', 
