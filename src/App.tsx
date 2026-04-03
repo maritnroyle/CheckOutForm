@@ -11,7 +11,7 @@ const CHECKLIST_SECTIONS = [
         id: 'b1', 
         label: 'Laundry', 
         description: 'Wash and dry the bed sheets, pillowcases, and duvet covers.', 
-        note: 'Please leave the mattress protector and heater on the bed.' 
+        note: 'Please leave the mattress protector and electric blanket on the bed.' 
       },
       { 
         id: 'b2', 
