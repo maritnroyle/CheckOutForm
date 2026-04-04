@@ -151,7 +151,7 @@ export default function App() {
         <div className="max-w-3xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img src="/wclogo2025.jpg" alt="WhiteCloud Homestay" className="h-12 object-contain" />
+              <img src="/favicon.jpg" alt="WhiteCloud Homestay" className="h-12 object-contain" />
             </div>
             <div className="text-sm font-medium text-[#002B7F]/70">
               Check-Out
